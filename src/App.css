@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background: whitesmoke;
+  display: flex;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #777;
+  border-radius: 0.5rem;
+  background: #fff;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas:
+    "h h h h"
+    "i1 i1 i1 i1"
+    "l  l c c";
+  grid-gap: 2rem;
+}
+
+.card {
+  padding: 2rem;
+  border: 3px solid #aaa;
+  border-radius: 0.5rem;
+  background: #ddd;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header {
+  grid-area: h;
+}
+
+.info-1 {
+  grid-area: i1;
+  text-align: center;
+}
+
+.list {
+  grid-area: l;
+}
+
+.list .recharts-wrapper {
+  margin: auto;
+}
+
+.chart {
+  grid-area: c;
+}
+
+.chart .recharts-wrapper {
+  margin-top: 6rem;
+}
+
+.header {
+  min-height: 10rem;
+}
+
+.list,
+.chart {
+  min-height: 20rem;
+}
